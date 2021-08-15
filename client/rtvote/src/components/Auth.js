@@ -1,0 +1,63 @@
+
+import React, {useState, useContext} from "react";
+import AuthForm from "./AuthForm";
+import {UserContext} from "../context/UserProvider"
+
+const initInputs = { username: "", password: ""}
+
+export default function Auth(){
+  const [inputs, setInputs] = useState(initInputs);
+  const [toggle, setToggle] = useState(false);
+
+  const { signup, login } = useContext(UserContext)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setInputs(prevInputs => ({
+      ...prevInputs,
+      [name]: value
+    }))
+  }
+
+  const handleSignup = (e) => {
+    e.preventDefault()
+    //signup
+    signup(inputs)
+  };
+  
+  const handleLogin = (e) => {
+    e.preventDefault()
+    //login
+    login(inputs)
+  };
+
+  return (
+    <div className="auth-container">
+      <h1>Rock The Vote!</h1>
+      { !toggle ?
+      <>
+      <AuthForm
+        handleChange={handleChange}
+        handleSubmit={handleSignup}
+        inputs={inputs}
+        btnText="Sign Up"
+      />
+      <p onClick={() => setToggle(prev => !prev)}>Already a Member?</p>
+      </>
+      :
+      <>
+      <AuthForm 
+        handleChange={handleChange}
+        handleSumbit={handleLogin}
+        inputs={inputs}
+        btnText="Login"
+        />
+        <p onClick={() => setToggle(prev => !prev)}>Not a member?</p>
+        </>
+      }
+    </div>
+  )
+};
+
+
+
