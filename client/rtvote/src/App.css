@@ -57,6 +57,16 @@
   justify-content: space-between;
   align-items: center;
 }
+.nav-container button {
+  height: 30px;
+  width: 70px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(235, 152, 57);
+  color: whitesmoke;
+  font-weight: 600;
+  font-size: medium;
+}
 
 .logo {
   padding-left: 40px;

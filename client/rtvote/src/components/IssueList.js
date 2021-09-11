@@ -1,8 +1,12 @@
+import Issue from "./Issue"
 
 
-const IssueList = () => {
+const IssueList = (props) => {
+  const { issues } = props
   return (
-    <div></div>
+    <div className="issue-list">
+      { issues.map(issue => <Issue {...issue} key={issue._id}/>) }
+    </div>
   )
 }
 

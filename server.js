@@ -6,12 +6,14 @@ const mongoose = require("mongoose");
 
 const jwt = require("express-jwt");
 process.env.SECRET
+const DBURI = process.env.DB_URI
+const PORT = process.env.PORT
 
 app.use(express.json())
 app.use(morgan("dev"));
 
 mongoose.connect(
-  "mongodb://localhost:27017/user-authentication", 
+  DBURI, 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -34,6 +36,6 @@ app.use((err, req, res, next) => {
   return res.send({ errMsg: err.message })
 });
 
-app.listen(9000, () => {
+app.listen(PORT, () => {
   console.log("Server is listening on port 9000");
 });

@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom"
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const {logout, token} = props
   return (
     <div className="nav-container">
       <div className="logo">RTV</div>
       <div>
-        <Link to="/">Auth</Link>
-        <Link to="/profile">Profile</Link>
+        { token && <Link to="/profile">Profile</Link>}
         <Link to="/public">Feed</Link>
+        { token && <button onClick={logout}>Logout</button>}
       </div>
     </div>
   )
