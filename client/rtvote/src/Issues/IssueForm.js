@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 //import Comment from "./Comment"
+import "./issues.css";
 
 const initInputs = {
   title: "",
@@ -26,13 +27,15 @@ const IssueForm = (props) => {
 
   const { title, description } = inputs
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="issue-form" onSubmit={handleSubmit}>
+      <label>Title:</label>
       <input 
         type="text"
         name="title"
         value={title}
         onChange={handleChange}
         placeholder="Title" />
+       <label>Description:</label> 
       <input 
         type="text"
         name="description"

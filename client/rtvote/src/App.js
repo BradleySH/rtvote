@@ -2,7 +2,7 @@
 import React, { useContext } from "react";
 import {Switch, Route, Redirect } from "react-router-dom"
 import Navbar from "./components/Navbar";
-import Auth from "./components/Auth";
+import Auth from "./Auth/Auth";
 import Profile from "./components/Profile"
 import Public from "./components/Public"; 
 import { UserContext } from "./context/UserProvider";

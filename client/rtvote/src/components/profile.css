@@ -1,0 +1,22 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.user-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.avatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: gray;
+}
