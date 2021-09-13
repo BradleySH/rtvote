@@ -1,10 +1,13 @@
 import IssueList from "../Issues/IssueList"
 
 
-const Public = () => {
+const Public = (props) => {
+  const {addComment, issues} = props
   return (
     <div>
-      <IssueList />
+      <IssueList 
+      issues={issues}
+      addComment={addComment} />
     </div>
   )
 }

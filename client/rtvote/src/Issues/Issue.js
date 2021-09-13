@@ -1,6 +1,6 @@
 
 const Issue = (props) => {
-  const { title, description, _id } = props
+  const { title, description } = props
   return (
     <div className="issue">
       <h3>{title}</h3>

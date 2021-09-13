@@ -36,12 +36,13 @@ const IssueForm = (props) => {
         onChange={handleChange}
         placeholder="Title" />
        <label>Description:</label> 
-      <input 
-        type="text"
-        name="description"
-        value={description}
-        onChange={handleChange}
-        placeholder="Description" />
+      <textarea
+      className="textarea"
+      type="text"
+      name="description"
+      value={description}
+      onChange={handleChange}
+      placeholder="Description"></textarea>
         <button>Submit Issue</button>
       {/* <Comment /> */}
     </form>

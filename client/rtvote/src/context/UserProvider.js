@@ -97,6 +97,12 @@ const UserProvider = (props) => {
 
   }
 
+  const addComment = () => {
+    userAxios.post("/comments")
+    .then(res => console.log(res.data))
+    .catch(err => console.log(err.response.data.errMsg))
+  }
+
   return (
     <UserContext.Provider value={{
       ...userState,
@@ -104,7 +110,8 @@ const UserProvider = (props) => {
       login,
       logout,
       addIssue,
-      resetAuthErr
+      resetAuthErr,
+      addComment
     }}>
       { props.children }
     </UserContext.Provider>
