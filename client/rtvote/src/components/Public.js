@@ -6,7 +6,6 @@ const Public = (props) => {
   return (
     <div>
       <IssueList 
-      issues={issues}
       addComment={addComment} />
     </div>
   )
