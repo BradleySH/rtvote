@@ -98,7 +98,7 @@ const UserProvider = (props) => {
   }
 
   const addComment = () => {
-    userAxios.post("/comments")
+    userAxios.post("/api/issues/comments")
     .then(res => console.log(res.data))
     .catch(err => console.log(err.response.data.errMsg))
   }

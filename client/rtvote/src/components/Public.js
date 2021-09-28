@@ -5,8 +5,8 @@ const Public = (props) => {
   const {addComment, issues} = props
   return (
     <div>
-      <IssueList 
-      addComment={addComment} />
+      <IssueList
+      issues={issues} />
     </div>
   )
 }

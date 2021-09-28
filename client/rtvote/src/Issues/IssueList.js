@@ -5,7 +5,7 @@ const IssueList = (props) => {
   const { issues } = props
   return (
     <div className="issue-list">
-      { issues.map(issue => <Issue {...issues} key={issue._id}/>) }
+      { issues.map(issue => <Issue {...issue} key={issue._id}/>) }
     </div>
   )
 }
