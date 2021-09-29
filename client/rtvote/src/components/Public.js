@@ -1,13 +1,16 @@
+import React, {useContext} from "react"
 import IssueList from "../Issues/IssueList"
+import { UserContext } from "../context/UserProvider";
 
 
-const Public = (props) => {
-  const {addComment, issues} = props
+const Public = () => {
+  const { user: {username}, issues } = useContext(UserContext);
+
   return (
     <div>
-      <IssueList
-      issues={issues} />
+      <IssueList issues={issues} />
     </div>
+      
   )
 }
 

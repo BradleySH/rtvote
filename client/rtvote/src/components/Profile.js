@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import IssueList from "../Issues/IssueList";
+//import IssueList from "../Issues/IssueList";
 import IssueForm from "../Issues/IssueForm";
 //import Issue from "./Issue";
 import { UserContext } from "../context/UserProvider";
@@ -19,7 +19,7 @@ const Profile = () => {
         <IssueForm addIssue={addIssue} />
       </div>
       <h3>Your Issues</h3>
-      <IssueList issues={issues} />
+      {/* <IssueList issues={issues} /> */}
     </div>
   )
 };
